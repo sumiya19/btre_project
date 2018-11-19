@@ -149,13 +149,3 @@ EMAIL_HOST_USER = 'traversy.brad@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS=True
 
-DEBUG = False
-
-try:
-    from .local_settings import *
-except ImportError:
-    pass
-
-if not DEBUG:
-    import django_heroku
-    django_heroku.settings(locals())
