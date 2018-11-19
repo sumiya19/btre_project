@@ -1,3 +1,4 @@
+from django.contrib.messages import constants as messages
 """
 Django settings for btre project.
 
@@ -85,7 +86,7 @@ DATABASES = {
         'NAME': 'btredb',
         'USER': 'postgres',
         'PASSWORD': '123456',
-        'PORT':'5434',
+        'PORT': '5434',
         'HOST': 'localhost'
     }
 }
@@ -133,21 +134,20 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'btre/static')
 ]
 
-#Media Folder Settings 
+# Media Folder Settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-#Email config
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'traversy.brad@gmail.com'
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS=True
+# # Email config
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'traversy.brad@gmail.com'
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = True
 
 try:
     from .local_settings import *
